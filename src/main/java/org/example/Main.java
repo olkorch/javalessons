@@ -1,19 +1,47 @@
-package org.example;
+import gpus.amd;
+import gpus.intel;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        amd amdCPU = new amd();
+        amdCPU.gpuInfo();
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        intel intelGPU = new intel();
+        intelGPU.gpuInfo();
+
+        int[] newArray = new int[10];
+        newArray[0] = 33;
+        newArray[1] = 5;
+        newArray[2] = 26;
+        newArray[3] = 48;
+        newArray[4] = 34;
+        newArray[5] = 0;
+        newArray[6] = 3;
+        newArray[7] = 69;
+        newArray[8] = 1;
+        newArray[9] = 39;
+
+        System.out.println("#1 " + newArray[0]);
+        System.out.println("#2 " + newArray[0]);
+        System.out.println("#3 " + newArray[0]);
+        System.out.println("#4 " + newArray[0]);
+        System.out.println("#5 " + newArray[0]);
+        System.out.println("#6 " + newArray[0]);
+        System.out.println("#7 " + newArray[0]);
+        System.out.println("#8 " + newArray[0]);
+        System.out.println("#9 " + newArray[0]);
+        System.out.println("#10 " + newArray[0]);
+
+
+        int[] numbers = new int[35];
+
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = i + 1;// Assigning values to the array elements
+            System.out.print(numbers[i] + " ");
+
         }
     }
 }
+
+
